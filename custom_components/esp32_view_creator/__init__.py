@@ -1,6 +1,5 @@
-from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
-from .views import ESP32ViewCreatorRemotesView
+from .views import ESP32ViewCreatorRemotesView, ESP32AddRemoteView
 
 DOMAIN = "esp32_view_creator"
 
@@ -8,8 +7,9 @@ async def async_setup(hass: HomeAssistant, config: dict):
     """Set up the ESP32 View Creator component."""
     hass.data[DOMAIN] = {"remotes": []}
 
-    # Register the API view
+    # Register API views
     hass.http.register_view(ESP32ViewCreatorRemotesView(hass))
+    hass.http.register_view(ESP32AddRemoteView(hass))
 
     # Register the custom panel
     hass.components.frontend.async_register_built_in_panel(
@@ -19,14 +19,4 @@ async def async_setup(hass: HomeAssistant, config: dict):
         js_url="/custom_components/esp32_view_creator/static/esp32_view_creator.js",
     )
 
-    return True
-
-async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
-    """Set up ESP32 View Creator from a config entry."""
-    hass.data[DOMAIN]["remotes"].append(entry.data)
-    return True
-
-async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry):
-    """Unload an ESP32 View Creator config entry."""
-    hass.data[DOMAIN]["remotes"].remove(entry.data)
     return True
