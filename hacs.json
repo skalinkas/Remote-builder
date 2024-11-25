@@ -1,0 +1,9 @@
+{
+    "name": "ESP32 View Creator",
+    "content_in_root": false,
+    "domains": ["esp32_view_creator"],
+    "country": "global",
+    "zip_release": false,
+    "iot_class": "local_polling",
+    "homeassistant": "2023.5.0"
+}

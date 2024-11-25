@@ -1,0 +1,6 @@
+send_view:
+  description: "Send a designed view to the ESP32"
+  fields:
+    view_definition:
+      description: "JSON definition of the view"
+      example: '{"type": "grid", "children": [{"type": "button", "label": "Click Me"}]}'

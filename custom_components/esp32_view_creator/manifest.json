@@ -1,0 +1,9 @@
+{
+    "domain": "esp32_view_creator",
+    "name": "ESP32 View Creator",
+    "version": "1.0.0",
+    "documentation": "https://github.com/yourusername/esp32_view_creator",
+    "requirements": ["aiohttp"],
+    "dependencies": [],
+    "codeowners": ["@skalinkas"]
+}

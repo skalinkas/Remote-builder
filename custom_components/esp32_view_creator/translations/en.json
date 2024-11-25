@@ -1,0 +1,11 @@
+{
+    "title": "ESP32 View Creator",
+    "config": {
+        "step": {
+            "user": {
+                "title": "ESP32 View Creator",
+                "description": "Connect to your ESP32 remote."
+            }
+        }
+    }
+}
