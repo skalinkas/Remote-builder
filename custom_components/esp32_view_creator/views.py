@@ -1,15 +1,18 @@
-from homeassistant.helpers import config_validation as cv
 from homeassistant.components.http import HomeAssistantView
 
-class ESP32ViewAPI(HomeAssistantView):
-    """API endpoint for receiving views."""
+DOMAIN = "esp32_view_creator"
 
-    url = "/api/esp32_view_creator"
-    name = "api:esp32_view_creator"
-    requires_auth = True
+class ESP32ViewCreatorRemotesView(HomeAssistantView):
+    """Handle requests for the list of remotes."""
 
-    async def post(self, request):
-        """Handle POST request to receive view data."""
-        body = await request.json()
-        # Process the view and send to ESP32
-        return self.json({"status": "ok"})
+    url = "/api/esp32_view_creator/remotes"
+    name = "api:esp32_view_creator:remotes"
+
+    def __init__(self, hass):
+        """Initialize the view."""
+        self.hass = hass
+
+    async def get(self, request):
+        """Handle GET requests."""
+        remotes = self.hass.data[DOMAIN]["remotes"]
+        return self.json(remotes)

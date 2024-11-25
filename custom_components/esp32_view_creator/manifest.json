@@ -2,10 +2,10 @@
     "domain": "esp32_view_creator",
     "name": "ESP32 View Creator",
     "version": "1.0.0",
-    "documentation": "https://github.com/yourusername/esp32_view_creator",
+    "documentation": "https://github.com/skalinkas/Remote-builder",
     "requirements": ["aiohttp"],
     "dependencies": [],
-    "codeowners": ["@yourusername"],
+    "codeowners": ["@skalinkas"],
     "iot_class": "local_polling",
     "config_flow": true
 }
