@@ -4,7 +4,7 @@
     "documentation": "https://github.com/skalinkas/Remote-builder",
     "requirements": [],
     "codeowners": ["@Skalinkas"],
-    "version": "0.0.1",
+    "version": "0.0.2",
     "dependencies": [],
     "config_flow": true
 }
