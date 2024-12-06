@@ -1,0 +1,10 @@
+{
+    "domain": "remote_builder",
+    "name": "Remote Builder",
+    "documentation": "https://github.com/skalinkas/Remote-builder",
+    "requirements": [],
+    "codeowners": ["@Skalinkas"],
+    "version": "0.0.1",
+    "dependencies": [],
+    "config_flow": true
+}

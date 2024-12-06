@@ -1,0 +1,11 @@
+{
+    "title": "Remote Builder",
+    "config": {
+        "step": {
+            "user": {
+                "title": "Set up Remote Builder",
+                "description": "Configure your integration."
+            }
+        }
+    }
+}
